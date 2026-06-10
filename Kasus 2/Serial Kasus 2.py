@@ -6,7 +6,7 @@ import time
 import math
 
 # --- 1. Parameter Simulasi ---
-N_PARTICLES = 500
+N_PARTICLES = 200
 PARTICLES_PER_FRAME = 25
 ANIMATION_INTERVAL_MS = 80
 energies = [4.270, 4.198] # MeV
