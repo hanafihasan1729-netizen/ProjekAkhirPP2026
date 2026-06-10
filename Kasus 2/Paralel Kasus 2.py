@@ -1,20 +1,10 @@
 """
 Simulasi dan visualisasi batch/parallel detektor partikel alfa U-238.
-Versi ini menambahkan:
-  • --cores N1,N2,...   → benchmark sweep: jalankan mp dengan berbagai jumlah core
-                          sekaligus, plot speedup & efisiensi vs Amdahl/Gustafson
-  • --scalability       → sama seperti --cores, pakai preset 1,2,4,8,16
-  • Perbaikan context spawn→fork untuk Linux/Mac (lebih cepat)
-  • Tambahan tabel hasil benchmark di terminal
-
-Contoh jalan lokal:
-    python Serial_Aawl_Parallel_HPC.py --mode serial --particles 500 --batch-size 25
-    python Serial_Aawl_Parallel_HPC.py --mode mp --workers 8 --particles 5000
-    python Serial_Aawl_Parallel_HPC.py --scalability --particles 20000
-    python Serial_Aawl_Parallel_HPC.py --cores 1,2,4,8 --particles 50000
-
-Contoh jalan HPC dengan MPI/headless:
-    mpiexec -n 4 python Serial_Aawl_Parallel_HPC.py --mode mpi --particles 50000 --save alpha.gif
+Melakukan simulasi dengan memasukkan bentuk line di bawah ini ke terminal:
+    python Paralel Kasus 2.py --mode serial --particles 500 --batch-size 25
+    python Paralel Kasus 2.py --mode mp --workers 8 --particles 5000
+    python Paralel Kasus 2.py --scalability --particles 20000
+    python Paralel Kasus 2.py --cores 1,2,4,8 --particles 50000
 """
 
 from __future__ import annotations
